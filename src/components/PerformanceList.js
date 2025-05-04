@@ -105,6 +105,7 @@ const PerformanceList = () => {
     if (!loading) {
       fetchPerformanceData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage, pageSize, sortBy, sortDirection, selectedCourse, selectedSubject, search]);
 
   // Handle search input with proper debouncing
