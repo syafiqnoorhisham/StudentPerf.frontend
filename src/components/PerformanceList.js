@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Row, Col, Form, Table, Spinner, Alert, Pagination, Card } from 'react-bootstrap';
 import api from '../services/api';
 
@@ -59,8 +59,8 @@ const PerformanceList = () => {
     initialize();
   }, []);
   
-  // Fetch performance data when filters, pagination, or sorting changes
-  const fetchPerformanceData = async () => {
+  // Fetch performance data when filters, pagination, or sorting changes - memoized with useCallback
+  const fetchPerformanceData = useCallback(async () => {
     setLoading(true);
     
     try {
@@ -98,14 +98,14 @@ const PerformanceList = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [currentPage, pageSize, sortBy, sortDirection, selectedCourse, selectedSubject, search]);
   
   // Re-fetch data when filters, pagination, or sorting changes
   useEffect(() => {
     if (!loading) {
       fetchPerformanceData();
     }
-  }, [currentPage, pageSize, sortBy, sortDirection, selectedCourse, selectedSubject, search]);
+  }, [fetchPerformanceData, loading]);
 
   // Handle search input with proper debouncing
   const handleSearchChange = (e) => {

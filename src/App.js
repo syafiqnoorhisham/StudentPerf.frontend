@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 import PerformanceList from './components/PerformanceList';
 import './App.css';

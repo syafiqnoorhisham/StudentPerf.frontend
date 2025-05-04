@@ -107,8 +107,11 @@ const initializeApi = async () => {
     await findWorkingApiUrl();
 };
 
-export default {
+// Create API object
+const apiService = {
     initializeApi,
     getPerformanceData,
     getFilterData
 };
+
+export default apiService;

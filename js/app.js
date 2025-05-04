@@ -2,7 +2,8 @@
 // Try both API URLs until one works
 const API_URLS = [
     'https://localhost:7119/api/performance',
-    'http://localhost:5162/api/performance'
+    'http://localhost:5162/api/performance',
+    'https://studentperf-api-frcyfegwfyc7b0hk.indonesiacentral-01.azurewebsites.net/api/performance'
 ];
 let API_BASE_URL = API_URLS[0];
 
