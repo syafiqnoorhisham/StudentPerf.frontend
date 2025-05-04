@@ -105,7 +105,7 @@ const PerformanceList = () => {
     if (!loading) {
       fetchPerformanceData();
     }
-  }, [fetchPerformanceData, loading]);
+  }, [currentPage, pageSize, sortBy, sortDirection, selectedCourse, selectedSubject, search]);
 
   // Handle search input with proper debouncing
   const handleSearchChange = (e) => {
