@@ -1,0 +1,41 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 20px 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e7e7e7;
+}
+
+.table th {
+  cursor: pointer;
+  position: relative;
+}
+
+.table th.active::after {
+  content: '↑';
+  position: absolute;
+  right: 8px;
+}
+
+.table th.active.desc::after {
+  content: '↓';
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.filters-row {
+  margin-bottom: 1.5rem;
+}
+
+.pagination-info {
+  margin-top: 1rem;
+}
