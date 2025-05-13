@@ -2,8 +2,6 @@ import axios from 'axios';
 
 // API Configuration
 const API_URLS = [
-    'https://localhost:7119/api/performance',
-    'http://localhost:5162/api/performance',
     'https://studentperf-api-frcyfegwfyc7b0hk.indonesiacentral-01.azurewebsites.net/api/performance'
 ];
 
